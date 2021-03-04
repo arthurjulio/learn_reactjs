@@ -1,16 +1,17 @@
-import logo from "./logo.svg";
+
+import { useState } from "react";
 import "./App.css";
-import Button from "@material-ui/core/Button";
+import MyBtn from './components/button'
+import Input from "./components/h1";
+
 
 function App() {
+  const [angka, setAngka] = useState(0)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <Button variant="contained" color="primary">
-          Test
-        </Button>
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
+    <div >
+      <Input >{angka}</Input>
+      <MyBtn onClick={e => { setAngka(angka + 1) }} color="#333">asdsa</MyBtn>
     </div>
   );
 }
